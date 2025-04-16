@@ -37,4 +37,4 @@ importances = rf.feature_importances_
 feature_names = X.columns
 sns.barplot(x=importances, y=feature_names)
 plt.title("Feature Importance")
-plt.show()
+plt.show(crist.Wilson)
