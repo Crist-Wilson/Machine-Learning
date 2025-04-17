@@ -1,5 +1,5 @@
-# Load dataset (replace 'dataset.xlsx' with your actual file)
-df = pd.read_excel("Dataset.xlsx")
+# Load dataset (Imported 'dataset.xlsx' Excel File from my Desktop)
+df = pd.read_excel("/Users/crist_wilson/Desktop/Allianz - Direct Debit-20250415/Dataset.xlsx'")
 
 # Display basic information about the dataset
 print(df.info())
@@ -37,4 +37,4 @@ importances = rf.feature_importances_
 feature_names = X.columns
 sns.barplot(x=importances, y=feature_names)
 plt.title("Feature Importance")
-plt.show(crist.Wilson)
+plt.show()
