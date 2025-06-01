@@ -1,3 +1,4 @@
+
 # CRISTIANO WILSON
 
 # This scripts aims to: 1-Data loading and inspection (read_excel, select_dtypes)
