@@ -1,21 +1,26 @@
-# Count how many customers use direct debit
-direct_debit_customers = data[data['Payment_Method'] == 'Direct Debit']['Customer_ID'].nunique()
+# CRISTIANO WILSON
 
-# Analyze brokers with the most direct debit contracts
-broker_analysis = data[data['Payment_Method'] == 'Direct Debit'].groupby('Broker_Name')['Contract_ID'].count()
+# This scripts aims to: 1-Data loading and inspection (read_excel, select_dtypes)
+# 2-Data transformation (Label Encoding)
+# 3-Preparation for ML (making all inputs numeric)
+# 4-Saving results (to_excel)
 
 import pandas as pd
+from sklearn.preprocessing import LabelEncoder
 
-# Load your data
-data = pd.read_excel("/path/to/Dataset.xlsx")
+# Load the dataset
+file_path = "Dataset.xlsx"
+df = pd.read_excel(file_path)
 
-# Filter only Direct Debit payments
-direct_debit_data = data[data['Payment_Method'] == 'Direct Debit']
+# Identify categorical columns
+categorical_columns = df.select_dtypes(include=["object", "category"]).columns
 
-# Group by location and count instances
-locations_summary = direct_debit_data.groupby('Location')['Customer_ID'].count()
+# Apply Label Encoding to categorical columns
+label_encoders = {}
+for col in categorical_columns:
+    le = LabelEncoder()
+    df[col] = le.fit_transform(df[col].astype(str))
+    label_encoders[col] = le
 
-# Sort in descending order to see the highest usage
-most_direct_debit_locations = locations_summary.sort_values(ascending=False)
-
-print(most_direct_debit_locations)
+# Save the encoded dataset
+df.to_excel("Dataset.xlsx", index=False)
