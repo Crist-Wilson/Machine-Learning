@@ -7,7 +7,7 @@
 # 4-Saving results (to_excel)
 
 import pandas as pd
-from sklearn.preprocessing import LabelEncoder
+from sklearn.preprocessing import LabelEncoder 
 
 # Load the dataset
 file_path = "Dataset.xlsx"
