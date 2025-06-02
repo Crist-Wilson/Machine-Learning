@@ -20,7 +20,7 @@ categorical_columns = df.select_dtypes(include=["object", "category"]).columns
 label_encoders = {}
 for col in categorical_columns:
     le = LabelEncoder()
-    df[col] = le.fit_transform(df[col].astype(str))
+    df[col] = le.fit_transform(df[col].astype(str)) 
     label_encoders[col] = le
 
 # Save the encoded dataset
