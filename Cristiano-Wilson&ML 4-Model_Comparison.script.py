@@ -6,7 +6,7 @@
 # 3-Model training for both linear (Logistic Regression) and ensemble (Random Forest) methods.
 # 4-Model evaluation using classification metrics.
 
-import pandas as pd
+import pandas as pd 
 from sklearn.model_selection import train_test_split
 from sklearn.preprocessing import LabelEncoder
 from sklearn.ensemble import RandomForestClassifier
