@@ -1,7 +1,7 @@
 
 # CRISTIANO WILSON
 
-# We are intending to: 1-Data cleaning and feature engineering (converting age bands)
+# We are intending to: 1-Data cleaning and feature engineering (converting age bands) 
 # 2-Encoding categorical variables for machine learning compatibility
 # 3-Normalization to standardize input values
 # 4-Unsupervised learning via K-Means clustering
