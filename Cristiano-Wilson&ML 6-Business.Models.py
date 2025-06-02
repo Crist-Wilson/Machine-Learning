@@ -1,5 +1,5 @@
 #Load dataset (replace 'dataset.xlsx' with your actual file)
-df = pd.read_excel("Dataset.xlsx")
+df = pd.read_excel("Dataset.xlsx") 
 
 # Display basic information about the dataset
 print(df.info())
