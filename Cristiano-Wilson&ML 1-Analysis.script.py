@@ -32,7 +32,7 @@ region_pattern = df.groupby('customer_region')['direct_debit_used'].mean().reset
 broker_pattern = df.groupby('broker_account_number')['direct_debit_used'].mean().reset_index().sort_values(by='direct_debit_used', ascending=False).head(10)
 contract_pattern = df.groupby('product_type')['direct_debit_used'].mean().reset_index()
 
-# Save all patterns to Excel
+# Save all patterns to Excel 
 with pd.ExcelWriter("/mnt/data/DirectDebit_Usage_Patterns.xlsx") as writer:
     age_pattern.to_excel(writer, sheet_name="By_Age_Group", index=False)
     region_pattern.to_excel(writer, sheet_name="By_Region", index=False)
